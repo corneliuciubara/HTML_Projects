@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+nav {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aliceblue;
+}
+
+.Logo {
+    width: 140px;
+    margin-left: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+}
+
+.login-btn {
+    text-decoration: none;
+    color: #333;
+    margin-right: 15px;
+    font-weight: 400;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #fff;
+    background-image: linear-gradient(45deg, #df4881, #c430d7);
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    transition: 0.5s;
+    margin-right: 10%;
+}
+
+.content {
+    margin-top: 10%;
+    margin-left: 100px;
+    max-width: 600px;
+}
+
+.content h1 {
+    font-size: 70px;
+    color: #222;
+}
+
+.content p {
+    margin: 10px 0 30px;
+    color: #333;
+    animation-delay: 0.5s;
+}
+
+.content .btn {
+    padding: 15px 18px;
+    font-size: 16px;
+    animation-delay: 1s;
+}
+
+.btn:hover {
+    border-top-right-radius: 30px;
+}
+
+.feature-img {
+    width: 400px;
+    position: absolute;
+    bottom: -600px;
+    right: 10%;
+}
+
+.feature-img.anim {
+    animation-delay: 1.5s;
+}
+
+.anim {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.fade-line {
+    width: 100%;
+    height: 5px;
+    background-image: linear-gradient(45deg, #df4881, #c430d7);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fade-line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, #df4881, #c430d7);
+    animation: fadeEffect 3s infinite alternate;
+}
+
+@keyframes fadeEffect {
+    0% {
+        left: -50%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+#about {
+    padding: 50px 0;
+    text-align: center;
+    animation: fadeIn 1s;
+    background-color: aliceblue;
+}
+
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 18px;
+    color: #555;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#about h2,
+#about p {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s;
+}
+
+#about h2.show,
+#about p.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+#benefits {
+    padding: 50px 10%;
+    text-align: center;
+    animation: fadeIn 1s;
+    position: relative;
+}
+
+#benefits h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#benefits p {
+    font-size: 18px;
+    color: #555;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#benefits h2,
+#benefits p {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s;
+}
+
+#benefits h2.show,
+#benefits p.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+.listofbenefits li {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+}
+
+.listofbenefits li.visible {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+
+
+
+
+
+
+.listofbenefits {
+    text-align: left;
+}
+
+.listel {
+    text-decoration: underline;
+}
